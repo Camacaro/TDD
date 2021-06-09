@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint . --fix",
-    "test": "jest --updateSnapshot",
+    "test": "jest --watch",
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts"
   },
   "pre-commit": [
