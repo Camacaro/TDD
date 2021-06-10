@@ -6,7 +6,11 @@
   "scripts": {
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint . --fix",
-    "test": "jest --watch",
+    "test": "jest --passWithNoTests --silent",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:int": "npm test -- --watch -c jest-int-config.js",
+    "test:coverage": "npm test -- --coverage",
+    "test:all": "jest",
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts"
   },
   "pre-commit": [
